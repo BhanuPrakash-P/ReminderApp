@@ -1,0 +1,43 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.bhanu.reminders">
+
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <application
+    android:allowBackup="true"
+    android:icon="@drawable/ic_reminder"
+    android:label="@string/app_name"
+    android:roundIcon="@drawable/ic_reminder"
+    android:supportsRtl="true"
+    android:theme="@style/Theme.RemindersApp"
+    tools:replace="android:appComponentFactory"
+    android:appComponentFactory="androidx.core.app.CoreComponentFactory">
+
+    <activity android:name=".MainActivity" android:exported="true">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+    </activity>
+
+    <activity android:name=".AddReminderActivity" android:exported="true"/>
+
+    <!-- Specify other activities and services here if necessary -->
+    <receiver android:name=".ReminderBroadcastReceiver"/>
+
+</application>
+
+<!-- Permissions for setting alarms -->
+<uses-permission android:name="android.alarm.permission.SET_ALARM" />
+
+<!-- Permissions for receiving boot completed if you want to reset alarms on reboot -->
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+<!-- Permissions for vibration if your notifications use vibration -->
+<uses-permission android:name="android.permission.VIBRATE" />
+
+<uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+
+
+</manifest>

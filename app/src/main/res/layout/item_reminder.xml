@@ -1,0 +1,34 @@
+<!-- Layout for each reminder item in the RecyclerView -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <!-- TextView to display the reminder title -->
+    <TextView
+        android:id="@+id/textViewReminderTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reminder Title"
+        android:textSize="18sp"
+        android:layout_alignParentStart="true"/>
+
+    <!-- TextView to display the reminder date and time -->
+    <TextView
+        android:id="@+id/textViewReminderDateTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewReminderTitle"
+        android:text="Date and Time"
+        android:textSize="16sp"
+        android:layout_alignParentStart="true"/>
+
+    <!-- Button to delete the reminder -->
+    <Button
+        android:id="@+id/buttonDeleteReminder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:text="Delete"
+        android:layout_centerVertical="true"/>
+</RelativeLayout>
